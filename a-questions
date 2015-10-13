@@ -1,0 +1,27 @@
+A:
+1. Write a function to reverse a linked list
+2. Write a function to count number of 4 GPIO events
+3. Surface memory allocation, access, stride
+4. multi-sample vs supersample:
+Notes:
+supersample (full screen) antialiasing: render the entire image at a resolution higher than the target resolution, and then shrink the image to the target resolution
+
+multisample (optimized) antialiasing: render some parts of the image at a high res, and shrink those parts (optimization of supersampling, generally the areas you want to supersample are polygon edges to avoid blocky effects of aliasing)
+
+adaptive (transparency) antialiasing: multisample + apply some additional supersampling to textures with transparency. (A mesh fence might only be one polygon, if you supersample only the edges of the polygon, that's not good enough, you'll have aliasing where you can see through the mesh).
+
+The 2x 4x 8x indicates how much higher in resolution you should start with (and then shrink down to 1x).
+
+Performance:
+
+Multisample (best)
+adaptive / transparency (middle)
+supersample (worst)
+
+Image Quality:
+
+supersample (best)
+adaptive (middle)
+multi (worst)
+
+Easiest on your machine is no antialiasing. 2x MSAA is the smallest impact and the smallest benefit. MSAA is a pretty expensive operation in all cases. SSAA is extremely expensive. You won't want to use it unless you have very high end hardware (AMD 5970 or better). Running 2x SSAA is the same performance penalty as running double the resolution, which is huge.
