@@ -3,6 +3,9 @@ A:
 2. Write a function to count number of 4 GPIO events
 3. Surface memory allocation, access, stride
 4. multi-sample vs supersample:
+5. difference b/w new and delete
+
+
 Notes:
 supersample (full screen) antialiasing: render the entire image at a resolution higher than the target resolution, and then shrink the image to the target resolution
 
