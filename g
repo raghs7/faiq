@@ -23,3 +23,6 @@ bool checkRectangleIntersection(struct Rect r1, struct Rect r2)
 
 
 2. write to function to implement memmove
+
+if dst < src, call memcpy
+if src > dst, copy in reverse order
