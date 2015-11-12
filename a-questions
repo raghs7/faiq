@@ -28,3 +28,8 @@ adaptive (middle)
 multi (worst)
 
 Easiest on your machine is no antialiasing. 2x MSAA is the smallest impact and the smallest benefit. MSAA is a pretty expensive operation in all cases. SSAA is extremely expensive. You won't want to use it unless you have very high end hardware (AMD 5970 or better). Running 2x SSAA is the same performance penalty as running double the resolution, which is huge.
+
+2nd:
+x - ((x - y) & ((x - y) >>
+            (sizeof(int) * CHAR_BIT - 1)));
+bitmap copy array buffer overflow 
