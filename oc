@@ -1,0 +1,14 @@
+1. How would you send an encoded message in an image. First
+    encode it, then write code to decode it.
+    
+    My initial idea was to use a digital watermark kind of technique using alteration of DCT coefficients and using that information to efficiently decode the message. 
+    However, there is a much better technique elaborated here - http://lucascozby.com/2015/09/15/encoding-messages-into-an-image/
+    
+    
+    I would always start with the simplest and fairly obvious answer; I would put the message to least significant bit layer of the image. The receiving end would only read the least significant bit layer of the image accordingly to decode the message.
+
+The least significant bit is invisible to the human eye. Test yourself by painting a rectangle with two reds next to each other of values (255,0,0) and (254,0,0). See if you can tell the difference.
+
+2. Transpose a Matrix. First do it using extra memory, then do it in place.   
+↳
+
