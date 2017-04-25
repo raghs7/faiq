@@ -10,5 +10,13 @@
 The least significant bit is invisible to the human eye. Test yourself by painting a rectangle with two reds next to each other of values (255,0,0) and (254,0,0). See if you can tell the difference.
 
 2. Transpose a Matrix. First do it using extra memory, then do it in place.   
-↳
+
+3. Model raindrops falling on a sidewalk (sidewalk is 1m and   raindrops are 1cm if I remember correctly). How could we know when the sidewalk is completely wet. 
+
+- generate 2d array of size sidewalk/raindrop size
+- fill will zeros
+- initially total wet area on sidewalk is 0 and when it reaches the size of 2d, the sidewalk is completely wet
+- generate two random number in range of 0 to length of 2d array in while loop
+- based on generated number use them as index and fill the element with 1 and increment the total wet area counter when area transition from 0 to 1
+- when total wet area counter == 2d array cells, the area is completely wet and stop the loop
 
